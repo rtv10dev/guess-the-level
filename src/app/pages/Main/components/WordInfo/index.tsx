@@ -5,11 +5,11 @@ const WordInfo = (props: Props) => {
   const { word, type } = props;
   return (
     <div className="flex flex-col justify-self-center items-center break-all">
-      <h1 className="text-6xl font-semibold text-white capitalize max-sm:text-4xl">
+      <h1 className="text-7xl font-semibold text-white capitalize max-sm:text-3xl">
         {word}
       </h1>
       <span className="text-4xl text-white max-sm:text-2xl">as</span>
-      <h1 className="text-6xl font-semibold text-white capitalize max-sm:text-4xl">
+      <h1 className="text-7xl font-semibold text-white capitalize max-sm:text-3xl">
         {type}
       </h1>
     </div>
