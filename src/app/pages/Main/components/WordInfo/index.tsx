@@ -1,7 +1,7 @@
 import React from "react";
 import { Props } from "./types";
 
-export default (props: Props) => {
+const WordInfo = (props: Props) => {
   const { word, type } = props;
   return (
     <div className="flex flex-col justify-self-center items-center">
@@ -15,3 +15,5 @@ export default (props: Props) => {
     </div>
   );
 };
+
+export default WordInfo;

@@ -2,7 +2,7 @@ import { levelButtons } from "./constants";
 import Button from "@/app/components/Button";
 import { Props } from "./types";
 
-export default (props: Props) => {
+const LevelButtons = (props: Props) => {
   const { onClick, selectedLevel } = props;
   const levels = levelButtons;
 
@@ -22,3 +22,5 @@ export default (props: Props) => {
     </div>
   );
 };
+
+export default LevelButtons;

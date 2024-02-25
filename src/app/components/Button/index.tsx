@@ -1,6 +1,6 @@
 import { Props } from "./types";
 
-export default (props: Props) => {
+const Button = (props: Props) => {
   const { level, selectedLevel, classes, onClick } = props;
 
   return (
@@ -15,3 +15,5 @@ export default (props: Props) => {
     </button>
   );
 };
+
+export default Button;

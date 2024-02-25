@@ -1,4 +1,4 @@
-export default () => {
+const Spinner = () => {
   return (
     <div>
       <svg
@@ -21,3 +21,5 @@ export default () => {
     </div>
   );
 };
+
+export default Spinner;

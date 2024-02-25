@@ -10,7 +10,7 @@ import WordInfo from "./components/WordInfo";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-export default () => {
+const Main = () => {
   const { data, error, isLoading } = useSWRImmutable("/api/words", fetcher);
   const [selectedLevel, setSelectedLevel] = useState<Levels>();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -57,3 +57,5 @@ export default () => {
     </main>
   );
 };
+
+export default Main;
