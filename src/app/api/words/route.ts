@@ -3,6 +3,8 @@ import fs from "fs";
 import csvParser from "csv-parser";
 import sampleSize from "lodash.samplesize";
 
+export const revalidate = 0;
+
 export async function GET() {
   const readFile = () =>
     new Promise((resolve) => {
