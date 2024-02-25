@@ -44,7 +44,7 @@ const Main = () => {
   };
 
   return (
-    <main className="h-screen flex flex-col justify-evenly">
+    <main className="h-screen flex flex-col justify-evenly px-2">
       <WordInfo
         word={data[currentWordIndex].headword}
         type={data[currentWordIndex].pos}
