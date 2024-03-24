@@ -1,0 +1,23 @@
+.text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+#tooltip {
+  word-break: normal;
+  max-width: 90%;
+}
+
+.border-bottom-dotted {
+  border-bottom: 1px dotted;
+}

@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import useSWRImmutable from "swr/immutable";
-import { useState } from "react";
-import { toast } from "react-hot-toast";
-import Spinner from "@/app/components/Spinner";
-import LevelButtons from "./components/LevelButtons";
-import { Levels } from "@/app/enums";
-import WordInfo from "./components/WordInfo";
+import Spinner from '@/app/components/Spinner';
+import { Levels } from '@/app/enums';
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import useSWRImmutable from 'swr/immutable';
+import LevelButtons from './components/LevelButtons';
+import WordInfo from './components/WordInfo';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Main = () => {
-  const { data, error, isLoading } = useSWRImmutable("/api/words", fetcher);
+  const { data, error, isLoading } = useSWRImmutable('/api/words', fetcher);
   const [selectedLevel, setSelectedLevel] = useState<Levels>();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
@@ -27,12 +27,12 @@ const Main = () => {
   const onClick = (level: Levels) => {
     setSelectedLevel(level);
 
-    if (level == data[currentWordIndex].CEFR) {
-      toast.success("Nice!", { duration: 2500, icon: "💯" });
+    if (level == data[currentWordIndex].level) {
+      toast.success('Nice!', { duration: 2500, icon: '💯' });
     } else {
       toast.error(
         <span>
-          Error! The correct level is <b>{data[currentWordIndex].CEFR}</b>
+          Error! The correct level is <b>{data[currentWordIndex].level}</b>
         </span>,
         { duration: 2500 }
       );
@@ -46,8 +46,10 @@ const Main = () => {
   return (
     <main className="h-screen flex flex-col justify-evenly px-2">
       <WordInfo
-        word={data[currentWordIndex].headword}
+        key={data[currentWordIndex].word + data[currentWordIndex].pos}
+        word={data[currentWordIndex].word}
         type={data[currentWordIndex].pos}
+        desc={data[currentWordIndex].desc}
       ></WordInfo>
 
       <LevelButtons
