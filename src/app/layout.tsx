@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Toaster } from "react-hot-toast";
-import Head from "next/head";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Head from 'next/head';
+import { Toaster } from 'react-hot-toast';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Guess the level",
-  description: "",
+  title: 'Guess the level',
+  description: ''
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -28,7 +28,7 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <div>
-          <Toaster position="bottom-center" />
+          <Toaster position="top-center" />
         </div>
         {children}
       </body>
