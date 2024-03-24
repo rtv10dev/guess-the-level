@@ -1,8 +1,7 @@
 .text {
   width: 100%;
-  white-space: nowrap;
   overflow: hidden;
-  animation: typing 4s;
+  animation: typing 2s;
   text-align: center;
   padding-bottom: 5px;
 }
